@@ -6,39 +6,10 @@
             body { margin: 0; font-size: 2em; background-color: white; }
             h1 { text-align: center; color: blue; }
         </style>
+        <!script src="js/bluebird.min.js"></script>
         <script type="text/javascript">
             setTimeout(function(){
-                var supportTable = {
-                    arrowF: false,
-                    es6classes: false,
-                    templateStrings: false,
-                    constLet: false,
-                    promises: false,
-                    asyncFunctions: false,
-                    destructurization: false
-                };
-                try{
-                    eval('(() => {supportTable.arrowF = true;})();');
-                } catch(e){}
-                try{
-                    eval('class A{}; supportTable.es6classes = true;');
-                } catch(e){}
-                try{
-                    eval('var a = `1`; if(a == "1"){supportTable.templateStrings = true}');
-                } catch(e){}
-                try{
-                    eval('const b = "1"; supportTable.constLet = true;');
-                } catch(e){}
-                try{
-                    eval('new Promise(() => {}); supportTable.promises = true;');
-                } catch(e){}
-                try{
-                    eval('async function c(){}; supportTable.asyncFunctions = true;');
-                } catch(e){}
-                try{
-                    eval('function c({a, b}){}; supportTable.destructurization = true;');
-                } catch(e){}
-                document.getElementById('about').innerText = JSON.stringify(supportTable, null, '    ');
+                
             }, 1000);
         </script>
     </head>
