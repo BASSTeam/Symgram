@@ -1,0 +1,10 @@
+{
+    "name": "symgram-builder",
+    "version": "0.0.0-a",
+    "dependencies": {
+        "yarn": "^1.10.1"
+    },
+    "scripts": {
+        "build": "yarn install && node build"
+    }
+}

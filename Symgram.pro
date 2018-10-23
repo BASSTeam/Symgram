@@ -1,3 +1,6 @@
+unix: system( cd builder && ./node_modules/.bin/yarn build )
+win32: system( cd builder && node_modules\.bin\yarn build )
+
 # Add more folders to ship with the application, here
 folder_01.source = html
 folder_01.target = .
