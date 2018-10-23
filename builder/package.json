@@ -10,6 +10,13 @@
         "uglifycss": "^0.0.29"
     },
     "scripts": {
-        "build": "yarn install && node build"
+        "build": "yarn install && node build",
+        "postinstall": "node -e 'const {spawnSync:spawn} = require(\"child_process\"); (require(\"./package.json\").noEdit || []).forEach(ne => spawn(\"git\", [\"checkout\", ne]))'"
+    },
+    "noEdit": [
+        "node_modules/modules_middleware"
+    ],
+    "engines": {
+        "node": ">=6.0.0"
     }
 }
